@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nexus Focus - Study Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="dark-mode">
+
+  <!-- Lo-fi / Game Background Video Canvas (ADHD sensory stimulation) -->
+  <div class="video-bg-container">
+    <iframe 
+      id="bg-video"
+      src="https://www.youtube.com/embed/n_Dv4JMiwK8?autoplay=1&mute=1&controls=0&loop=1&playlist=n_Dv4JMiwK8&playsinline=1" 
+      frameborder="0" 
+      allow="autoplay; encrypted-media">
+    </iframe>
+    <div class="video-overlay"></div>
+  </div>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar glass">
+    <div class="nav-left">
+      <div class="dropdown-btn" id="categoryDropdown">
+        <i class="fa-solid fa-compass"></i>
+        <span>Explore Topics</span>
+        <i class="fa-solid fa-chevron-down caret"></i>
+        <div class="dropdown-content">
+          <a href="#">🔬 Stem & Physics</a>
+          <a href="#">🧠 Neuro & Biology</a>
+          <a href="#">💻 CS & Architecture</a>
+          <a href="#">📐 Calculus & Discrete Math</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <a href="#blog" class="nav-link">Blog</a>
+      <a href="#about" class="nav-link">About</a>
+      <button class="icon-toggle-btn" id="themeToggle" title="Toggle Light/Dark Mode">
+        <i class="fa-solid fa-moon"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Main Grid Layout -->
+  <div class="app-layout">
+    
+    <!-- Left Sidebar: Discord-like Study Rooms -->
+    <aside class="study-rooms-sidebar glass">
+      <div class="sidebar-header">
+        <span class="pulse-dot"></span>
+        <label>LIVE ROOMS</label>
+      </div>
+      
+      <div class="rooms-scroll-list">
+        <!-- Room 1 -->
+        <div class="room-pill online" title="Lofi Chill & Pomodoro">
+          <div class="avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&h=100&fit=crop" alt="Room" />
+            <span class="status-indicator"></span>
+          </div>
+          <div class="room-meta">
+            <p class="room-title">Lofi Chill ☕</p>
+            <p class="room-count">24 students</p>
+          </div>
+        </div>
+
+        <!-- Room 2 -->
+        <div class="room-pill online" title="Calculus Grind">
+          <div class="avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop" alt="Room" />
+            <span class="status-indicator"></span>
+          </div>
+          <div class="room-meta">
+            <p class="room-title">Calculus Grind</p>
+            <p class="room-count">12 students</p>
+          </div>
+        </div>
+
+        <!-- Room 3 -->
+        <div class="room-pill online" title="Late Night Silent Room">
+          <div class="avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=100&h=100&fit=crop" alt="Room" />
+            <span class="status-indicator"></span>
+          </div>
+          <div class="room-meta">
+            <p class="room-title">Silent Library</p>
+            <p class="room-count">48 students</p>
+          </div>
+        </div>
+
+        <!-- Room 4 (Offline) -->
+        <div class="room-pill offline" title="Physics Hall">
+          <div class="avatar-wrap">
+            <img src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=100&h=100&fit=crop" alt="Room" />
+            <span class="status-indicator"></span>
+          </div>
+          <div class="room-meta">
+            <p class="room-title">Physics Hub</p>
+            <p class="room-count">Offline</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Create Room Button -->
+      <button class="add-room-btn"><i class="fa-solid fa-plus"></i></button>
+    </aside>
+
+    <!-- Center/Main Hub: Curriculum & Modules -->
+    <main class="main-dashboard">
+      
+      <div class="hero-title-area">
+        <h1>Welcome Back, Scholar ⚡</h1>
+        <p>Pick a subject channel to enter your dynamic focus stream.</p>
+      </div>
+
+      <!-- Feature Deck (3 Cards mapped from your sketch) -->
+      <section class="cards-grid">
+        
+        <!-- Card 1 -->
+        <div class="curriculum-card glass">
+          <div class="card-video-thumb">
+            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=500&h=300&fit=crop" alt="Anatomy" />
+            <span class="badge">Lecture 04</span>
+          </div>
+          <div class="card-info">
+            <h3>Anatomy Lecture</h3>
+            <p>Musculoskeletal systems & neuro-pathway diagrams.</p>
+            <div class="card-actions">
+              <button class="action-tag"><i class="fa-solid fa-file-pdf"></i> Uploaded Notes</button>
+              <button class="action-tag play-btn"><i class="fa-brands fa-youtube"></i> Video</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="curriculum-card glass">
+          <div class="card-video-thumb">
+            <img src="https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=500&h=300&fit=crop" alt="Physics" />
+            <span class="badge">Class 12th</span>
+          </div>
+          <div class="card-info">
+            <h3>Class 12th Physics</h3>
+            <p>Electromagnetic induction & wave-particle duality.</p>
+            <div class="card-actions">
+              <button class="action-tag"><i class="fa-solid fa-file-pdf"></i> Uploaded Notes</button>
+              <button class="action-tag play-btn"><i class="fa-brands fa-youtube"></i> Video</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="curriculum-card glass">
+          <div class="card-video-thumb">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=500&h=300&fit=crop" alt="Science" />
+            <span class="badge">Tech Stack</span>
+          </div>
+          <div class="card-info">
+            <h3>Science & Tech</h3>
+            <p>Generative UI architecture, computer vision & robotics.</p>
+            <div class="card-actions">
+              <button class="action-tag"><i class="fa-solid fa-file-pdf"></i> Uploaded Notes</button>
+              <button class="action-tag play-btn"><i class="fa-brands fa-youtube"></i> Video</button>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <!-- Bottom-Right Theme Switcher (Minecraft / Mario Kart / Roblox / Ambient) -->
+  <div class="bg-gamemode-picker glass">
+    <button class="game-btn active" onclick="changeGameBg('minecraft')" title="Minecraft Parkour">⛏️ Minecraft</button>
+    <button class="game-btn" onclick="changeGameBg('mariokart')" title="Mario Kart 8">🏎️ Mario Kart</button>
+    <button class="game-btn" onclick="changeGameBg('subwaysurfer')" title="Subway Surfer">🛹 Surfer</button>
+    <button class="game-btn" onclick="changeGameBg('ambient')" title="Minimal Lofi">☕ Lofi</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
